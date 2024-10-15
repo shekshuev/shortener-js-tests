@@ -25,13 +25,19 @@ describe("Iteration 1 Tests", function () {
     });
 
     it("should redirect to original URL with GET /{id}", async function () {
+        let status = 0;
+        let location = "";
         try {
-            await axios.get(shortenURL, {
+            const response = await axios.get(shortenURL, {
                 maxRedirects: 0
             });
+            status = response.status;
+            location = response.headers["location"];
         } catch (e) {
-            expect(e.response.status).to.equal(307);
-            expect(e.response.headers["location"]).to.equal(originalURL);
+            status = e.response.status;
+            location = e.response.headers["location"];
         }
+        expect(status).to.equal(307);
+        expect(location).to.equal(originalURL);
     });
 });
