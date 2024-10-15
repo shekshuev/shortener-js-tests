@@ -1,0 +1,26 @@
+{
+  "name": "shortener-js-tests",
+  "version": "0.0.1",
+  "description": "Integration tests for https://github.com/shekshuev/shortener-js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shekshuev/shortener-js-tests.git"
+  },
+  "author": "Sergei Shekshuev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shekshuev/shortener-js-tests/issues"
+  },
+  "homepage": "https://github.com/shekshuev/shortener-js-tests#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "prettier": "^3.3.3"
+  }
+}
